@@ -10,3 +10,12 @@
     opacity: 1;
   }
 }
+
+@keyframes onclick-animate {
+  from {
+    transform: scale(15%);
+  }
+  to {
+    transform: scale(0%);
+  }
+}

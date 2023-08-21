@@ -15,8 +15,11 @@
   <body>
     <div class="header"><p class="header--text">Type in your news! 😊</p></div>
     <div class="add__news">
-      <textarea class="add__news--input"></textarea>
-      <button class="button">New News</button>
+      <textarea maxlength="250" class="add__news--input"></textarea>
+      <div class="container">
+        <button class="button">New News</button>
+        <p class="counter">0 of 250 characters</p>
+      </div>
     </div>
 
     <section class="news">

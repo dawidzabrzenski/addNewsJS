@@ -27,6 +27,7 @@
     border: none;
     border-radius: 12px;
     resize: none;
+    transition: 0.3s ease;
 
     color: #e0e0e0;
     font-family: inherit;
@@ -38,24 +39,35 @@
   }
 }
 
-.button {
-  background-color: #357bf5;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  padding: 1.2rem 4rem;
-  height: 75px;
-  font-family: inherit;
-  font-size: 1.2rem;
-  transition: 0.5s ease-out;
-  font-weight: 700;
+.container {
+  .button {
+    background-color: #357bf5;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 1.2rem 4rem;
+    height: 75px;
+    font-family: inherit;
+    font-size: 1.2rem;
+    transition: 0.5s ease-out;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
 
-  &:hover {
-    background-color: #275cb9;
+    &:hover {
+      background-color: #275cb9;
+    }
+  }
+
+  .counter {
+    color: #e0e0e0;
+    font-weight: 800;
+    transition: 1s ease;
   }
 }
 
 .news {
+  display: flex;
+  flex-wrap: wrap;
   &__box {
     background-color: #3f3f3f;
     width: 450px;
@@ -76,6 +88,10 @@
       font-weight: 300;
     }
   }
+}
+
+.onclick-animate {
+  animation: onclick-animate 1s linear;
 }
 
 .wrong {

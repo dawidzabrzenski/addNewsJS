@@ -17,6 +17,12 @@ body {
     transform: translate(0);
     opacity: 1; } }
 
+@keyframes onclick-animate {
+  from {
+    transform: scale(15%); }
+  to {
+    transform: scale(0%); } }
+
 .header {
   display: flex;
   justify-content: center;
@@ -41,13 +47,14 @@ body {
     border: none;
     border-radius: 12px;
     resize: none;
+    transition: 0.3s ease;
     color: #e0e0e0;
     font-family: inherit; }
     .add__news--input:focus {
       outline: none;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
 
-.button {
+.container .button {
   background-color: #357bf5;
   color: #fff;
   border: none;
@@ -57,27 +64,39 @@ body {
   font-family: inherit;
   font-size: 1.2rem;
   transition: 0.5s ease-out;
-  font-weight: 700; }
-  .button:hover {
+  font-weight: 700;
+  margin-bottom: 1.2rem; }
+  .container .button:hover {
     background-color: #275cb9; }
 
-.news__box {
-  background-color: #3f3f3f;
-  width: 450px;
-  padding: 1.2rem 1.4rem;
-  margin: 0 1.2rem 1.2rem;
-  animation: append-animate 0.25s linear;
-  border-radius: 4px; }
-  .news__box--title {
-    color: #e0e0e0;
-    font-weight: 700;
-    font-size: 2rem;
-    margin-bottom: 0.8rem; }
-  .news__box--content {
-    color: #e0e0e0;
-    text-align: justify;
-    font-size: 1.2rem;
-    font-weight: 300; }
+.container .counter {
+  color: #e0e0e0;
+  font-weight: 800;
+  transition: 1s ease; }
+
+.news {
+  display: flex;
+  flex-wrap: wrap; }
+  .news__box {
+    background-color: #3f3f3f;
+    width: 450px;
+    padding: 1.2rem 1.4rem;
+    margin: 0 1.2rem 1.2rem;
+    animation: append-animate 0.25s linear;
+    border-radius: 4px; }
+    .news__box--title {
+      color: #e0e0e0;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 0.8rem; }
+    .news__box--content {
+      color: #e0e0e0;
+      text-align: justify;
+      font-size: 1.2rem;
+      font-weight: 300; }
+
+.onclick-animate {
+  animation: onclick-animate 1s linear; }
 
 .wrong {
   background-color: #c91717; }
